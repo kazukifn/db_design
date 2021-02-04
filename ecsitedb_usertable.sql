@@ -30,6 +30,11 @@ CREATE TABLE `usertable` (
   `gender` enum('男','女','その他') NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
+  `zip` int NOT NULL,
+  `address1` text NOT NULL,
+  `address2` text,
+  `company` varchar(45) DEFAULT NULL,
+  `create_at` datetime NOT NULL,
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-03 17:56:23
+-- Dump completed on 2021-02-04 17:36:22
