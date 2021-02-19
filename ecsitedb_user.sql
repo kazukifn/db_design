@@ -36,7 +36,10 @@ CREATE TABLE `user` (
   `company` varchar(45) DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`userID`)
+  `product` varchar(255) NOT NULL,
+  `purchase_history` varchar(255) NOT NULL,
+  `productID` int NOT NULL,
+  PRIMARY KEY (`userID`,`productID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -58,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-09 17:52:48
+-- Dump completed on 2021-02-19 18:08:41
