@@ -16,37 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `product`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user` (
-  `userID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `furigana` varchar(45) NOT NULL,
-  `birthday` date NOT NULL,
-  `gender` enum('男','女','その他') NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `zip` int NOT NULL,
-  `address1` text NOT NULL,
-  `address2` text,
-  `company` varchar(45) DEFAULT NULL,
+CREATE TABLE `product` (
+  `productID` int NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(225) NOT NULL,
+  `summary` varchar(225) NOT NULL,
+  `stock` int NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`userID`)
+  PRIMARY KEY (`productID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `product`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
