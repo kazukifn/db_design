@@ -27,6 +27,7 @@ CREATE TABLE `product` (
   `product_name` varchar(225) NOT NULL,
   `summary` varchar(225) NOT NULL,
   `stock` int NOT NULL,
+  `price` int NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`productID`)
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-24 17:12:30
+-- Dump completed on 2021-02-24 17:28:06
