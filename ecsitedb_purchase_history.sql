@@ -23,13 +23,15 @@ DROP TABLE IF EXISTS `purchase_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `purchase_history` (
-  `userID` int NOT NULL,
-  `productID` int NOT NULL,
   `purchase_historyID` int NOT NULL AUTO_INCREMENT,
-  `purchase_quantity` int NOT NULL,
+  `userID` int NOT NULL,
+  `purchase_history_detailID` int NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`purchase_historyID`)
+  PRIMARY KEY (`purchase_historyID`),
+  KEY `userID_idx` (`userID`),
+  KEY `fk_purchase_history_detailID_idx` (`purchase_history_detailID`),
+  CONSTRAINT `fk_userID` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -51,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-24 17:28:07
+-- Dump completed on 2021-03-03 18:12:34

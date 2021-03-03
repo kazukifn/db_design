@@ -16,31 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `product`
+-- Table structure for table `purchase_history_detail`
 --
 
-DROP TABLE IF EXISTS `product`;
+DROP TABLE IF EXISTS `purchase_history_detail`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `product` (
-  `productID` int NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(225) NOT NULL,
-  `summary` varchar(225) NOT NULL,
-  `stock` int NOT NULL,
-  `price` int NOT NULL,
+CREATE TABLE `purchase_history_detail` (
+  `idpurchase_history_detailID` int NOT NULL,
+  `productID` int NOT NULL,
+  `purchase_quantity` int NOT NULL,
+  `total amount` int NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`productID`)
+  `update_at` datetime NOT NULL,
+  PRIMARY KEY (`idpurchase_history_detailID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `product`
+-- Dumping data for table `purchase_history_detail`
 --
 
-LOCK TABLES `product` WRITE;
-/*!40000 ALTER TABLE `product` DISABLE KEYS */;
-/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+LOCK TABLES `purchase_history_detail` WRITE;
+/*!40000 ALTER TABLE `purchase_history_detail` DISABLE KEYS */;
+/*!40000 ALTER TABLE `purchase_history_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
