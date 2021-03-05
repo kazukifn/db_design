@@ -29,7 +29,9 @@ CREATE TABLE `purchase_history_detail` (
   `total amount` int NOT NULL,
   `created_at` datetime NOT NULL,
   `update_at` datetime NOT NULL,
-  PRIMARY KEY (`idpurchase_history_detailID`)
+  PRIMARY KEY (`idpurchase_history_detailID`),
+  KEY `fk_productID_idx` (`productID`),
+  CONSTRAINT `fk_productID` FOREIGN KEY (`productID`) REFERENCES `product` (`productID`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -51,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-03 18:12:34
+-- Dump completed on 2021-03-05 15:40:41
